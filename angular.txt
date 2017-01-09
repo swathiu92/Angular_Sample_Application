@@ -1,0 +1,146 @@
+https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxyaWRlZWFzeTEyMzR8Z3g6NDEzZTYzYjZkZmU2ZmQ4Yg
+
+angular
+
+1. Dependency injection - pattern that get hold of all the dependencies
+2. Two way binding - scope variable changes whenever model value changes
+3. Why is AJS better - two way binding, MVC, SPA, events triggering is easy -- less code, reusability - directives can be used as widgets, Karma - test runner, Form validation easier
+4. Directives - extended HTML atrributes
+5. Directives flow - Compile , Controller, Pre link, Post link 
+6. Scope  object where model values are stored
+7. Injector - DI container
+8. Check one way binding in depth
+9. Communication between controllers - rootscope, services, emit, broadcast, $parent, controllerAs and inject
+10. $destry - to detach scope and its children from the parent.
+11. HTML Compiler - allows to add any functionality to the HTML.
+12. Providers - constant, value, services and factory.
+13. Decorators -  modify directives, services or filters without changing the original code.
+14. If there are three directives - parent, child, grandchild -- grandchild's directive is compiled first.
+15. $delegate -  it is used to access the service given to decorate. $delegate is the service that we will be decorating. Then output is returned to the original service to be decorated.
+16. HTML - static DOM - ng-app - dependencies - compile the HTML -- view
+17. ng-strict-di - does not allow implicit annotation. For example :.controller("BadController", function($scope, $http, $filter) -- this will throw an error. Can use $inject.
+18. angular.copy -- deep copy. no memory.
+19. angular.merge - 
+20. angular.extend - 
+21. order of DI doesn't matter because in the background itself angular converts these dependencies using toString and append it to $inject.
+22. pre-link is rarely used because the child might take time to load so that might be undefined.
+23. terminal: true -- in directive to execute it at the end.
+24. ng-transclude - if it is true then any content mentioned in the template will be shown inside the template provided in the directive.
+25. ng-bind - evaluate any expression , ng-bind-html - escape characters, ng-bind-template -  multiple expressions.
+26. ng-bind-template is used because elements like title and option cannot contain span elements.
+27. pristine -not touched at all, dirty - modified.
+28. ng-list - converts into an array if seperated by ,
+29. ngModelOptions -  allows you to modify the behaviour of ngModel. For example: ng-model-options="{ updateOn: 'blur' }" -- will update model on blur.
+30.  ng-model-options="{ getterSetter: true }" -- uses function as ngModel rather than a value
+31. ngNonBindable -- for expression not to be evaluated and display as it is.
+32. <Controllername>.apply(vm, <name of variable>) -- parent to child
+33. ng-srcset - you can mention different variations. For example: ng-srcset = 'url 2x' -- this will change the size.
+34. angular.version - current version.
+35.
+
+
+javascript
+
+Javascript
+
+1. var bar = [], bar ={}, bar = null ---> typeof is object
+2. check type of array --> bar instanceOf Array or check any type then use instanceOf.
+3. In javascript, var a = b = 3 is shorthand for b = 3, a = b. Unless 'use strict' is used   then it throws an error that b is not defined.
+4. Hierarchy -- > parent - child - child's child.  If a variable is declared in parent function then it can be accessed only in chid not child's child.
+5. jQuery.noConflict() is used to disable $ reference to jQuery
+6. 'use strict' is used for strict parsing and handling JS errors. Benefits are -- makes debugging easier, does not allow global variables, throws an error on invalid usage of delete , does not allow duplicate values.
+7. In Javascript, numbers are treated as floating points. For example, console.log(0.2+0.3) might print 0.30000004.
+8. Math. in javascript
+9. DOM (Document Object Model) is a programming API created when the page is loading.The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+10. Check Document objects
+11. Closure is inner function that has access to outer function's variables.
+12. === checks both same type and same value.
+13. var a={},b={key:'1'} , a[b] -- b will be converted to [object Object]
+14. Form validation and Form validation API in JS. 
+15. Value.constructor contains its type. For example : x.constructor.toString().indexOf("Object") === 0 if x is an object.
+16. toString() returns value of a string object. Check JS String Reference.
+17. JS DataTypes - string, object, boolean, function, number.
+18. JS Object types - object, array and date.
+19. Check Number methods.
+20. this is an object that owns the function. It is a reference.
+21. All JS objects inherit properties and methods from their prototype. For example: new Object() is inherited from Object.prototype.
+22. If a variable is dclared without var then it is a global variable and can be used unless it is in strict mode. This is hoisting.
+23. call()-- number of arguments passed to the function are known or apply() -- arguments passed not known or an array -- methods are used to invoke a function.
+24. querySelectorAll() is used to find html elements with css selectors. For example: document.querySelectorAll("p.intro")
+25. Event propagation is a way of defining element order when an event occurs.
+26. Event bubbling - inner most element's event is handled first. parent's element will be triggered too.
+27. Event capturing - outer most element's event is handled first.
+28. JS Nodes - parentNode, childNodes[n], firstChild, lastChild, previousSibling, nextSibling.
+29. BOM (Browser Object Model) -- window.open(), window.close(), window.resizeTo(), window.moveTo().
+30. history.back() - back button in browser , history.forward() - forward button in browser.
+31. void operator evaluates expression and returns undefined. For example: void(0), it prevents the page from refreshing.
+32. Two types of function - named and anonymous.
+33. Callback is a function passed to a method as an argument.
+34. undefined - typeof variable that is defined, not defined - if the variable is not defined at all.
+35. eval evaluates a string as if it were an expression.
+36. Timeout called only once, Interval call after certain intervals.
+37. Variable typing - assigning a variable to number then assigning same variable to a string.
+38. undefined - variable not declared or not assigned any value. null - assignment to a variable.
+39. cookies -  small test files stored in computer.
+40. Errors  - runtime, load time, logical.
+41. unshift - pushes at the beginning of the array.
+42. onload -  is not triggered until complete page is loaded, ondocumentready - triggered after DOM is loaded.
+43. forEach - you don't control the way it iterates, for - can control by assigning required value to i.
+44. Screen objects - AvailHeight, AvailWidth, Height, Width, ColorDepth.
+45. escape() - encoding a string, unescape() - decoding a string. Same goes with encodeURI and decodeURI
+46. Namespacing - unique names to functions, objects or variables.
+47. "10"+20+30 will print 102030 as after string it will be concatenated.10+20+"30" will print 3030
+48. navigator.appVersion - OS
+
+jquery
+
+1. jQuery Selectors - selects element based on name.
+2. Check jQuery Events. (click, keypress, dblclick etc.)
+3. jQuery fade , slide animate methods.
+4. Callback is executed when current functionality is finished.
+5. jQuery chaining - using multiple commands one after another. For example : $("#p1").css("color", "red").slideUp(2000).slideDown(2000).
+6. DOM Manipulation methods - text(), val(), html(), attr().
+7. append() , prepend() -- add text after and before respectively.
+8. after() , before() -- add text after and before respectively.
+9. difference between after() and append() is that after() add the text after the element and append() adds the text in the element.
+10. remove() - removes selected elements, empty() - removes child elements, detach() - removes element but there is backup.
+11. change style - .css() or document.getElementById().style.
+12. jQuery dimensions - width(), height(), innerWidth(), innerHeight(), outerWidth(), outerHeight().
+13. width(), height() - width and height (excludes border, padding and margin)
+14. innerWidth(), innerHeight() - width and height( includes padding).
+15. outerHeight(), outerWidth() - height and width (includes padding and border), outerHeight(true), outerWidth(true) -- includes padding, border and margin.
+16. jQuery traversing - move through HTML elements to find the elements.
+17. jQuery traversing methods - parent(), parents(), parentsUntil().
+18. jQuery traversing descentants methods - children(), find().
+19. jQuery traversing sibling methods - siblings(), next(), nextAll(), nextUntil(), prev(), prevAll(), prevUntil().
+20.  jQuery traversing filtering methods - first(), last(), eq(n) -- index , not(), filter().
+21. Ajax - Asynchronous JS and XML - loading data in background and dispplay it on the screen after callback.
+22. $(selector).load(URL,data,callback) -- Ajax load method.
+23. $ is short for jQuery.
+24. If you need to use another JavaScript library alongside jQuery, return control of $ back to the other library with a call to $.noConflict().
+25. Check jQuery selectors.
+26. event.preventDefault() -- prevents default action od the event.
+27. even.stopPropagation() -- prevents parent from being notified about the event.
+28. Check jQuery events.
+29. delegate() -- àttaches event handlers to the selected element.this is deprecate. on() is used instead.
+30. jQuery.ajax() - contains all request methods and other options, jQuery.get() - under jQuery.ajax() - performs get method functionality.
+31. $["div[id$='ids']"] -- returns all ids under div that ends with ids.
+32. clone() -- creates deep copy and does not copy events.
+33. promise() - returns promise once all the actions are completed.
+34. fast selectors - id, slow selectors - class.
+35. last selectors are executed first.
+36. $('<div>') - creates a new element, $('div') - finds div.
+37. jQuery.fx.off = true-- disables animation.
+38. attr() vs prop() - example $(this).attr('value') - returns value attribute, $(this).prop('value') -- returns updated value. http://jsfiddle.net/bipen/54nLM/
+39. one() - perform event only once.
+40. $.holdReady(true) - stops document.Ready.
+41. end() - For example : $(table).find(tbody).css().end().css(border) -- if end() is given then it goes back to it parent applies css border to the table.
+42. jQuery effects - show(). hide(), fadeIn(), fadeOut() Toggle().
+43. size() is method, length is property.
+44. jQuery Connect - is used to bind one function to another.
+45. delete will not impact on the length of array.
+
+
+
+
+

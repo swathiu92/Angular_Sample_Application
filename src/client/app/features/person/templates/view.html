@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <fieldset>
+        <legend>Primary Details</legend>
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-4 control-label">First Name</label>
+            <div class="col-sm-8">
+              <p class="form-control-static">{{vm.person.firstName}}</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Last Name</label>
+            <div class="col-sm-8">
+              <p class="form-control-static">{{vm.person.lastName}}</p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Address</legend>
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Street</label>
+            <div class="col-sm-8">
+              <p class="form-control-static">{{vm.person.street}}</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">City</label>
+            <div class="col-sm-8">
+              <p class="form-control-static">{{vm.person.city}}</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">State</label>
+            <div class="col-sm-8">
+              <p class="form-control-static">{{vm.person.state}}</p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Official</legend>
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Company</label>
+            <div class="col-sm-8">
+              <p class="form-control-static">{{vm.person.company}}</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">Date of Join</label>
+            <div class="col-sm-8">
+              <p class="form-control-static">{{vm.person.doj}}</p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-sm-8">
+      <fieldset>
+        <legend>Personal Details
+          <div class="pull-right">
+            <button class="btn btn-primary btn-xs" ui-sref="personEdit({id: vm.person.id})">Edit</button>
+            <!--<button class="btn btn-danger btn-xs" ng-click="vm.delete(vm.person.id)">Delete</button>-->
+          </div>
+        </legend>
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-4">
+              <p class="form-control-static">{{vm.person.email}}</p>
+            </div>
+            <label class="col-sm-2 control-label">Phone</label>
+            <div class="col-sm-4">
+              <p class="form-control-static">{{vm.person.phone}}</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Date Of Birth</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">{{vm.person.dob}}</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Language</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">{{vm.person.primaryLanguage}}</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label  class="col-sm-4 control-label">Gender</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">{{vm.person.gender}}</p>
+                </div>
+              </div>
+              <div class="text-center">
+                <img ng-src="{{vm.person.picture}}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Description</legend>
+        <p class="form-control-static">
+          {{vm.person.desc}}
+        </p>
+        <br />
+      </fieldset>
+    </div>
+  </div>
+</div>

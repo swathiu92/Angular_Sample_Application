@@ -1,0 +1,24 @@
+{
+  "name": "gulp-angular-project",
+  "dependencies": {
+    "jquery": "latest",
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "angular-messages": "latest",
+    "bootstrap": "latest",
+    "angular-resource": "latest",
+	"angular-bootstrap": "latest",
+	"ngToast":"latest"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/css/bootstrap-theme.css"
+      ]
+    }
+  },
+  "devDependencies": {
+    "angular-mocks": "latest"
+  }
+}

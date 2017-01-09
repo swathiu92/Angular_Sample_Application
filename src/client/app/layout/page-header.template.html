@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li ng-repeat="state in $ctrl.states" ui-sref-active="active" ui-sref="{{state.name}}">
+                    <a href="#">{{state.settings.nav.display}}</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted"><span class="cursor" ui-sref="home"><span class="glyphicon glyphicon-lamp"></span> Personnel Manager</span></h3>
+    </div>
+</div>

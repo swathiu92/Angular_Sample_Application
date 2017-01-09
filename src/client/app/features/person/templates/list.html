@@ -1,0 +1,65 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Person List
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-1 text-right"><label>Filter by:</label></div>
+      <div class="col-md-3">
+        <input type="text" ng-model="vm.listFilter" class="form-control" />
+      </div>
+	  
+    </div>
+	 <toast></toast>
+    <hr/>
+	 <ul class="pagination-center" uib-pagination total-items="vm.totalItems" items-per-page="10" ng-model="vm.currentPage"></ul>
+    <div class="table-responsive">
+      <table class="table" ng-if="vm.persons && vm.persons.length">
+        <thead>
+          <tr>
+			<th>  
+			  <a href="javascript:void(0)" ng-click="vm.orderByField='firstName'; vm.reverseSort = !vm.reverseSort">
+                <!--<span ng-show="vm.orderByField==='firstName'; !vm.reverseSort" class="glyphicon glyphicon-triangle-bottom"></span>
+			    <span ng-show="vm.orderByField==='firstName'; vm.reverseSort" class="glyphicon glyphicon-triangle-top"></span>-->
+			    First Name
+              </a> 
+			</th>
+            <th>
+			  <a href="javascript:void(0)" ng-init="vm.orderByField='lastName'" ng-click="vm.orderByField='lastName'; vm.reverseSort = !vm.reverseSort">
+                <!--<span ng-show="!vm.reverseSort" class="glyphicon glyphicon-triangle-bottom"></span>
+			    <span ng-show="vm.orderByField==='lastName' && vm.reverseSort" class="glyphicon glyphicon-triangle-top"></span>-->
+			    Last Name
+              </a> 
+			</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Ratings</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="person in vm.persons.slice(((vm.currentPage-1)*vm.itemsPerPage), ((vm.currentPage)*vm.itemsPerPage)) | orderBy:vm.orderByField:vm.reverseSort | filter: vm.listFilter">
+            <td>{{person.firstName}}</td>
+            <td>{{person.lastName}}</td>
+            <td>{{person.city}}</td>
+            <td>{{person.salary | currency}}</td>
+            <td><ratings value="{{person.ratings}}"></ratings></td>
+            <td class="text-center">
+              <a ui-sref="personView({id: person.id})">
+                <i class="glyphicon glyphicon-tasks"></i> View
+              </a>
+              |
+              <a ui-sref="personEdit({id: person.id})">
+                <i class="glyphicon glyphicon-pencil"></i> Edit
+              </a>
+              |
+              <a href="javascript:void(0)" ng-click="vm.delete(person.id)">
+                <i class="glyphicon glyphicon-remove"></i> Delete
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

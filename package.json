@@ -1,0 +1,48 @@
+{
+  "name": "try-angular",
+  "version": "1.0.0",
+  "description": "Boilerplate for AngularJs project",
+  "scripts": {
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vijeysrc/tryangular.git"
+  },
+  "keywords": [
+    "GulpJs",
+    "AngularJs",
+    "BrowserSync",
+    "UI Router",
+    "Bootstrap",
+    "Eslint",
+    "LESS"
+  ],
+  "author": "Vijey N <vijeyswamy@yahoo.com> (http://github.com/vijeysrc)",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "*",
+    "angular-bootstrap": "latest",
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp-angular-filesort": "latest",
+    "gulp-angular-templatecache": "latest",
+    "gulp-concat": "latest",
+    "gulp-eslint": "latest",
+    "gulp-inject": "latest",
+    "gulp-less": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-task-listing": "latest",
+    "jasmine-core": "latest",
+    "json-rest-serve": "^1.2.1",
+    "karma": "latest",
+    "karma-jasmine": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "karma-spec-reporter": "latest",
+    "main-bower-files": "latest",
+    "phantomjs-prebuilt": "latest",
+    "proxy-middleware": "^0.15.0",
+    "streamqueue": "latest",
+    "url": "^0.11.0"
+  }
+}

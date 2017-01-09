@@ -1,0 +1,161 @@
+<div class="container">
+  <form action="">
+    <div class="row">
+      <div class="col-sm-4">
+        <fieldset>
+          <legend>Primary Details</legend>
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-4 control-label">First Name</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.firstName" class="form-control input-sm"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Last Name</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.lastName"  class="form-control input-sm"/>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Address</legend>
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Street</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.street" class="form-control input-sm"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label">City</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.city"  class="form-control input-sm"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label">State</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.state"  class="form-control input-sm"/>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Official</legend>
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Company</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.company"  class="form-control input-sm"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Dept.</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.department"  class="form-control input-sm"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Date of Join</label>
+              <div class="col-sm-8">
+                <input type="text" ng-model="vm.person.doj"  class="form-control input-sm"/>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="col-sm-8">
+        <fieldset>
+          <legend>Personal Details
+            <div class="pull-right">
+              <button class="btn btn-primary btn-xs" ng-click="vm.save($event)">Save</button>
+              <button class="btn btn-default btn-xs" ui-sref="personList">Cancel</button>
+              <button class="btn btn-info btn-xs" ng-click="vm.reset()">Reset</button>
+            </div>
+          </legend>
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-4">
+                <input type="text" ng-model="vm.person.email" class="form-control input-sm"/>
+              </div>
+              <label class="col-sm-2 control-label">Phone</label>
+              <div class="col-sm-4">
+                <input type="text" ng-model="vm.person.phone" class="form-control input-sm"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Date Of Birth</label>
+                  <div class="col-sm-8">
+                    <input type="text" ng-model="vm.person.dob" class="form-control input-sm"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Eye Color</label>
+                  <div class="col-sm-8">
+                    <select name="eyeColor" class="form-control input-sm" ng-model="vm.person.eyeColor">
+                      <option value="1">Black</option>
+                      <option value="2">Blue</option>
+                      <option value="3">Brown</option>
+                      <option value="4">Green</option>
+                      <option value="5">Cat</option>
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label  class="col-sm-4 control-label">Social Media</label>
+                <div class="col-sm-8">
+                  <div class="checkbox">
+                    <label for="">
+                      <input type="checkbox" ng-model="vm.person.socialMediaPresence.facebook"/> Facebook
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label for="">
+                      <input type="checkbox" ng-model="vm.person.socialMediaPresence.twitter" /> Twitter
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label for="">
+                      <input type="checkbox" ng-model="vm.person.socialMediaPresence.whatsapp" /> Whatsapp
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label  class="col-sm-4 control-label">Gender</label>
+                <div class="col-sm-8">
+                  <label class="radio-inline">
+                    <input type="radio" name="gender" ng-model="vm.person.gender" value="M"> Male
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="gender" ng-model="vm.person.gender" value="F"> Female
+                  </label>
+                </div>
+              </div>
+              <div class="text-center">
+                <!-- <img ng-src="{{vm.person.personal.picture}}" alt="" /> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Description</legend>
+        <textarea class="form-control input-sm" ng-model="vm.person.desc"></textarea>
+        <br />
+      </fieldset>
+      <!--<fieldset>
+        <legend>Countries Visited</legend>
+        {{vm.person.countriesVisited}}
+      </fieldset>-->
+    </div>
+  </div>
+</form>
+</div>
